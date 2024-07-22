@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Disease Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Potato Disease Classification</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <label for="fileInput" class="choose_image">Choose image</label>
+            <input type="file" name="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+            <input type="submit" value="Upload" class="submit-btn">
+        </form>
+        <div id="imagePreviewContainer">
+            <img id="imagePreview" src="" alt="Image Preview" style="display: none;">
+
+            {% if prediction %}
+            <p id="result">{{ prediction }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.getElementById('imagePreview');
+                img.src = e.target.result;
+                img.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>
+</body>
+</html>
