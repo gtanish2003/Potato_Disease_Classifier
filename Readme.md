@@ -2,7 +2,8 @@
 # Potato Disease Classifier
 
 
-Dataset : [kaggle](https://www.kaggle.com/datasets/arjuntejaswi/plant-village)
+- Dataset : [kaggle](https://www.kaggle.com/datasets/arjuntejaswi/plant-village)
+- Model Training : [Colab](https://colab.research.google.com/drive/1hOjAISS6SEvOgx4I5AIeN63FckX9E-Rj#scrollTo=shwBxxCNUmME)
 
 This project implements a Convolutional Neural Network (CNN) to classify diseases in potato plants. It's designed as a multiclassification system, capable of identifying multiple types of potato diseases from input images.
 
