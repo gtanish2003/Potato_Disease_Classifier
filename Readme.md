@@ -21,5 +21,5 @@ This project implements a Convolutional Neural Network (CNN) to classify disease
 * Model Deployment
 
 ## Screenshots
-![1.1](Screenshots\1.png)
-![1.2](Screenshots\2.png)
+![1.1](Screenshots/1.png)
+![1.2](Screenshots/2.png)
